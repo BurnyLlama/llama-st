@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "FiraCode Nerd Font:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -60,7 +60,7 @@ static unsigned int cursorthickness = 1;
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
  * it
  */
-static int bellvolume = 0;
+static int bellvolume = 75;
 
 /* default TERM value */
 char *termname = "st-256color";
@@ -87,41 +87,38 @@ float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+  /* 8 normal colors */
+  "#000000", /* black   */
+  "#fc3442", /* red     */
+  "#42df32", /* green   */
+  "#fe9e13", /* yellow  */
+  "#4543fe", /* blue    */
+  "#db13ee", /* magenta */
+  "#02beed", /* cyan    */
+  "#dddddd", /* white   */
 
-	[255] = 0,
+  /* 8 bright colors */
+   "#222222", /* black   */
+   "#ff5451", /* red     */
+   "#51fe45", /* green   */
+   "#ffbe35", /* yellow  */
+   "#5763ff", /* blue    */
+   "#ea38fd", /* magenta */
+   "#21deff", /* cyan    */
+   "#eeeeee", /* white   */
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"black",
+  /* special colors */
+  "#111111", /* background */
+  "#ddddff", /* foreground */
 };
-
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 258;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
