@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "FiraCode Nerd Font:pixelsize=16:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "FiraCode Nerd Font:pixelsize=18:antialias=true:autohint=true";
+static int borderpx = 16;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -54,7 +54,7 @@ static unsigned int blinktimeout = 800;
 /*
  * thickness of underline and bar cursors
  */
-static unsigned int cursorthickness = 1;
+static unsigned int cursorthickness = 2;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -99,18 +99,18 @@ static const char *colorname[] = {
   "#dddddd", /* white   */
 
   /* 8 bright colors */
-   "#222222", /* black   */
-   "#ff5451", /* red     */
-   "#51fe45", /* green   */
-   "#ffbe35", /* yellow  */
-   "#5763ff", /* blue    */
-   "#ea38fd", /* magenta */
-   "#21deff", /* cyan    */
-   "#eeeeee", /* white   */
+  "#4b4b4b", /* black   */
+  "#ff5451", /* red     */
+  "#51fe45", /* green   */
+  "#ffbe35", /* yellow  */
+  "#5763ff", /* blue    */
+  "#ea38fd", /* magenta */
+  "#21deff", /* cyan    */
+  "#eeeeee", /* white   */
 
   /* special colors */
-  "#111111", /* background */
-  "#ddddff", /* foreground */
+   [256] = "#000000", /* background */
+   [257] = "#ddddff", /* foreground */
 };
 
 /*
@@ -119,8 +119,8 @@ static const char *colorname[] = {
  */
 unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 256;
 
 /*
  * Default shape of cursor
